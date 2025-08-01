@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: url(img3.png);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  background:url(img2.png);
+  border: 3px solid rgb(11, 21, 69);
+  background-size: cover;
+  background-position: center;
+}
+
+#score {
+  font-size: 20px;
+  margin-top: 10px;
+}
