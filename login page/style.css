@@ -55,6 +55,8 @@ body {
     border-radius: 40px;
     font-size: 16px;
     color: #f1e7e7;
+    padding: 30px;
+    text-align: center;
 
 
 }
@@ -243,6 +245,13 @@ p {
   }
 }
 
+#regpage{
+  color: aqua;
+}
 
-
-
+#btn{
+  transition: 0.5s;
+}
+.btn:hover{
+  background:skyblue;
+}
