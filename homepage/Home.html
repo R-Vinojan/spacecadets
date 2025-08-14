@@ -2,37 +2,135 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   
-    <link rel="stylesheet" href="home.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <div class="sidebar">
-    <div class="logo-details">
-      <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo-name">Space cadets</span>
-    </div>
-  </div>
-  <nav class="navbar">
-    <div class="left-section">
-      <div class="hamburger">☰</div>
-      <img src="logo2.png" alt="Site Logo" class="logo" />
-    </div>
-    <ul class="nav-links">
-      <li>Home</li>
-      <li>About us</li>
-      <li>Videos</li>
-    </ul>
-    <div class="right-section">
-      <div class="notification">🔔</div>
-      <div class="profile-icon">👤</div>
-    </div>
-  </nav>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxl-c-plus-plus'></i>
+            <span class="logo-name">Space Cadets</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <div class="icon-link">
+                <a href="/sun/sun.html">
+                    <i class='bx bxs-sun' ></i>
+                    <span class="link-name">Sun</span>
+                </a>
+                    <i class='bx bx-chevrons-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="line-name" href="/sun/sun.html">Sun</a></li>
+                    <li><a href="#">example</a></li>
+                    <li><a href="#">example</a></li>
+                    <li><a href="#">example</a></li>
+                </ul>
+            </li>
+               <li>
+                <div class="icon-link">
+                <a href="/earth/earth.html">
+                    <i class='bx bxs-sun' ></i>
+                    <span class="link-name">Earth</span>
+                </a>  
+                    <i class='bx bx-chevrons-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="line-name" href="/earth/earth.html">Earth</a></li>
+                    <li><a href="#">example1</a></li>
+                    <li><a href="#">example2</a></li>
+                    <li><a href="#">example3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/planets/planets.html">
+                    <i class='bx bxs-planet' ></i>
+                    <span class="link-name">Planets</span>
+                </a>
+                 <ul class="sub-menu blank">
+                    <li><a class="line-name" href="/planets/planets.html">Planets</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/moon/moon.html">
+                    <i class='bx bxs-moon' ></i>
+                    <span class="link-name">Moon</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="line-name" href="/moon/moon.html">Moon</a></li>
+                </ul>
+            </li> 
+            <li>
+                <a href="/galaxies/galaxies.html">
+                    <i class='bx bxs-sun' ></i>
+                    <span class="link-name">Galaxies</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="line-name" href="/galaxies/galaxies.html">Galaxies</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/star/star.html">
+                    <i class='bx bx-star' ></i>
+                    <span class="link-name">Stars</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="line-name" href="/star/star.html">Stars</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/games/gamepage.html">
+                    <i class='bx bx-game' ></i>
+                    <span class="link-name">Games</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="line-name" href="/games/gamepage.html">Games</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-movie-play' ></i>
+                    <span class="link-name">Videos</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="line-name" href="#">Videos</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cog' ></i>
+                    <span class="link-name">Settings</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="line-name" href="#">Settings</a></li>
+                </ul>
+            </li>
 
-  <div class="search-container">
-    <span class="search-icon">🔭</span>
-    <input type="text" placeholder="search here.................." />
-  </div>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class="bx bx-menu"></i>
+            <span class="text">Drop down side bar</span>
+        </div>
+    </section>
+<script>
+     let arrow = document.querySelectorAll(".arrow");
+     for (var i = 0; i < arrow.length;i++){
+        arrow[i].addEventListener("click",(e)=>{
+            let arrowParent = e.target.parentElement.parentElement;
+             console.log(arrowParent);
+             arrowParent.classList.toggle("showMenu");
+        })
+     }
+    let sidebar = document.querySelector(".sidebar") ;
+    let sidebarBtn = document.querySelector(".bx-menu") ;
+   console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+   });
+</script>    
 </body>
 </html>
